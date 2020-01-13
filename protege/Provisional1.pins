@@ -1,0 +1,112 @@
+; Fri Nov 29 16:03:12 CET 2019
+; 
+;+ (version "3.5")
+;+ (build "Build 660")
+
+([KB_109745_Class17] of  Categoria
+
+	(LlibresCategoria [KB_109745_Class34])
+	(NomCategoria "Drama"))
+
+([KB_109745_Class19] of  Llargada
+
+	(LlibresNumPag [Provisional1_Class0])
+	(NumPags "Corto(<500)"))
+
+([KB_109745_Class34] of  Llibres
+
+	(CategoriaLlibre [KB_109745_Class17])
+	(inverse_of_LlibrePreu [Provisional1_Class34])
+	(inverse_of_LlibreSaga [Provisional1_Class29])
+	(inverse_of_LlibresNacionalitatAutor [Provisional1_Class37])
+	(inverse_of_LlibresNomPublic
+		[Provisional1_Class9]
+		[Provisional1_Class8])
+	(NomLlibre "50 Sombras de Grey")
+	(NumPagines [KB_109745_Class35]))
+
+([KB_109745_Class35] of  Llargada
+
+	(LlibresNumPag
+		[KB_109745_Class34]
+		[Provisional1_Class2])
+	(NumPags "Largo(>500)"))
+
+([Provisional1_Class0] of  Llibres
+
+	(CategoriaLlibre [Provisional1_Class1])
+	(inverse_of_LlibrePreu [Provisional1_Class32])
+	(inverse_of_LlibreSaga [Provisional1_Class28])
+	(inverse_of_LlibresNacionalitatAutor [Provisional1_Class35])
+	(inverse_of_LlibresNomPublic [Provisional1_Class8])
+	(NomLlibre "1984")
+	(NumPagines [KB_109745_Class19]))
+
+([Provisional1_Class1] of  Categoria
+
+	(LlibresCategoria [Provisional1_Class0])
+	(NomCategoria "Ciencia Ficcio"))
+
+([Provisional1_Class2] of  Llibres
+
+	(CategoriaLlibre [Provisional1_Class4])
+	(inverse_of_LlibrePreu [Provisional1_Class32])
+	(inverse_of_LlibreSaga [Provisional1_Class28])
+	(inverse_of_LlibresNacionalitatAutor [Provisional1_Class37])
+	(inverse_of_LlibresNomPublic [Provisional1_Class8])
+	(NomLlibre "El resplandor")
+	(NumPagines [KB_109745_Class35]))
+
+([Provisional1_Class28] of  Saga
+
+	(LlibreSaga
+		[Provisional1_Class0]
+		[Provisional1_Class2])
+	(Pertany_Saga FALSE))
+
+([Provisional1_Class29] of  Saga
+
+	(LlibreSaga [KB_109745_Class34])
+	(Pertany_Saga TRUE))
+
+([Provisional1_Class32] of  Preu
+
+	(LlibrePreu
+		[Provisional1_Class0]
+		[Provisional1_Class2])
+	(preu "<11"))
+
+([Provisional1_Class34] of  Preu
+
+	(LlibrePreu [KB_109745_Class34])
+	(preu "<15"))
+
+([Provisional1_Class35] of  Nacionalitat_Autor
+
+	(LlibresNacionalitatAutor [Provisional1_Class0])
+	(nacionalitatAutor "UK"))
+
+([Provisional1_Class37] of  Nacionalitat_Autor
+
+	(LlibresNacionalitatAutor
+		[Provisional1_Class2]
+		[KB_109745_Class34])
+	(nacionalitatAutor "USA"))
+
+([Provisional1_Class4] of  Categoria
+
+	(LlibresCategoria [Provisional1_Class2])
+	(NomCategoria "Terror"))
+
+([Provisional1_Class8] of  PublicDestinatari
+
+	(LlibresNomPublic
+		[Provisional1_Class0]
+		[KB_109745_Class34]
+		[Provisional1_Class2])
+	(NomPublic "Adult"))
+
+([Provisional1_Class9] of  PublicDestinatari
+
+	(LlibresNomPublic [KB_109745_Class34])
+	(NomPublic "Adolescent"))

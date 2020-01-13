@@ -1,0 +1,407 @@
+; Tue Dec 17 00:48:33 CET 2019
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(multislot LlibresCategoriaEdat
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot LlibresCategoriaEdat)
+		(create-accessor read-write))
+	(multislot AutorsPais
+		(type INSTANCE)
+;+		(allowed-classes Autor)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot PaisAutor)
+		(create-accessor read-write))
+	(multislot LlibreSaga
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot inverse_of_LlibreSaga)
+		(create-accessor read-write))
+	(multislot LlibresAutor
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot AutorLlibre)
+		(create-accessor read-write))
+	(single-slot Provisional1_Class21
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot NomAutor
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LlibresPublic
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot PublicLlibre)
+		(create-accessor read-write))
+	(multislot LibrosProtagonizados
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot ProtagonizadoPor)
+		(create-accessor read-write))
+	(single-slot NumPagines
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LlibresNumPag
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot EdatMin
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot categoria_Edat)
+		(create-accessor read-write))
+	(single-slot Rellevancia
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot NumPags
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot inverse_of_LlibresNumPag
+		(type INSTANCE)
+;+		(allowed-classes)
+		(create-accessor read-write))
+	(single-slot AutorTop
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot MundoInventado
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot NomLlibre
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot CategoriaEdat
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot AutorLlibre
+		(type INSTANCE)
+;+		(allowed-classes Autor)
+;+		(cardinality 1 1)
+;+		(inverse-slot LlibresAutor)
+		(create-accessor read-write))
+	(single-slot NomCategoria
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot AnyPublicacio
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot DificultadLibro
+		(type INSTANCE)
+;+		(allowed-classes Dificultad)
+;+		(cardinality 1 1)
+;+		(inverse-slot LibrosDificultad)
+		(create-accessor read-write))
+	(single-slot LlibresEdatMin
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot LlibresCategoria
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot CategoriaLlibre)
+		(create-accessor read-write))
+	(multislot LlibresNacionalitatAutor
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot inverse_of_LlibresNacionalitatAutor)
+		(create-accessor read-write))
+	(multislot Relevancia
+		(type INSTANCE)
+;+		(allowed-classes)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot Llibres_Rellevancia)
+		(create-accessor read-write))
+	(single-slot inverse_of_LlibreSaga
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 1 1)
+;+		(inverse-slot LlibreSaga)
+		(create-accessor read-write))
+	(single-slot dificultaddeLibro
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot inverse_of_LlibresCategoria
+		(type INSTANCE)
+;+		(allowed-classes Categoria)
+		(create-accessor read-write))
+	(single-slot PuntuacioLlibre
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot preu
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Nacionalitat
+		(type STRING)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Genero
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LibrosDificultad
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot DificultadLibro)
+		(create-accessor read-write))
+	(multislot ProtagonizadoPor
+		(type INSTANCE)
+;+		(allowed-classes Protagonista)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot LibrosProtagonizados)
+		(create-accessor read-write))
+	(multislot LlibrePreu
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot PreuLlibre)
+		(create-accessor read-write))
+	(single-slot Pertany_Saga
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot PaisAutor
+		(type INSTANCE)
+;+		(allowed-classes Pais)
+;+		(cardinality 1 1)
+;+		(inverse-slot AutorsPais)
+		(create-accessor read-write))
+	(multislot Llibres_Rellevancia
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot Relevancia)
+		(create-accessor read-write))
+	(single-slot PreuLlibre
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 1 1)
+;+		(inverse-slot LlibrePreu)
+		(create-accessor read-write))
+	(single-slot inverse_of_LlibresNacionalitatAutor
+		(type INSTANCE)
+;+		(allowed-classes Autor)
+;+		(cardinality 1 1)
+;+		(inverse-slot LlibresNacionalitatAutor)
+		(create-accessor read-write))
+	(single-slot provisional2_Class2
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Public
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot CategoriaLlibre
+		(type INSTANCE)
+;+		(allowed-classes Categoria)
+;+		(cardinality 1 1)
+;+		(inverse-slot LlibresCategoria)
+		(create-accessor read-write))
+	(single-slot NomPais
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot nacionalitatAutor
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Preu
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Saga
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot PublicLlibre
+		(type INSTANCE)
+;+		(allowed-classes PublicDestinatari)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot LlibresPublic)
+		(create-accessor read-write))
+	(single-slot provisional2_Class0
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot categoria_Edat
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 1 1)
+;+		(inverse-slot EdatMin)
+		(create-accessor read-write)))
+
+(defclass Llibres
+	(is-a USER)
+	(role concrete)
+	(single-slot AnyPublicacio
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot MundoInventado
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot DificultadLibro
+		(type INSTANCE)
+;+		(allowed-classes Dificultad)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Preu
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot NumPagines
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Saga
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot NomLlibre
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot PublicLlibre
+		(type INSTANCE)
+;+		(allowed-classes PublicDestinatari)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot ProtagonizadoPor
+		(type INSTANCE)
+;+		(allowed-classes Protagonista)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot CategoriaLlibre
+		(type INSTANCE)
+;+		(allowed-classes Categoria)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot AutorLlibre
+		(type INSTANCE)
+;+		(allowed-classes Autor)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Categoria
+	(is-a USER)
+	(role concrete)
+	(single-slot NomCategoria
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LlibresCategoria
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass PublicDestinatari
+	(is-a USER)
+	(role concrete)
+	(multislot LlibresPublic
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Public
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Autor
+	(is-a USER)
+	(role concrete)
+	(single-slot PaisAutor
+		(type INSTANCE)
+;+		(allowed-classes Pais)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot NomAutor
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot AutorTop
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot LlibresAutor
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Protagonista
+	(is-a USER)
+	(role concrete)
+	(multislot LibrosProtagonizados
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Genero
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Pais
+	(is-a USER)
+	(role concrete)
+	(multislot AutorsPais
+		(type INSTANCE)
+;+		(allowed-classes Autor)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot NomPais
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Dificultad
+	(is-a USER)
+	(role concrete)
+	(multislot LibrosDificultad
+		(type INSTANCE)
+;+		(allowed-classes Llibres)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot dificultaddeLibro
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
